@@ -1,0 +1,12 @@
+<odoo>
+    <data noupdate="1">
+        <record id="zalo_data" model="zalo.config">
+            <field name="name">Name</field>
+            <field name="app_id">1754546491852698796</field>
+            <field name="key_app_secret">1H9K5d6BM1f1I4Uh53u9</field>
+            <field name="default_oa_api_base">https://openapi.zalo.me/v2.0/oa/message?access_token</field>
+            <field name="oa_id">4086840522363055726</field>
+            <field name="key_oa_secret">3xY1OO8OXCAUEBn3RWMC</field>
+        </record>
+    </data>
+</odoo>

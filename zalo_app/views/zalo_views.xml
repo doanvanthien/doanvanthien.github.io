@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="izi_zalo_list">
+            <field name="name">izi_zalo list</field>
+            <field name="model">zalo.zalo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="izi_zalo_form">
+            <field name="name">izi_zalo list</field>
+            <field name="model">zalo.zalo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                        <field name="user_id"/>
+                    </group>
+                    <button name="action_action" type="object" string="Button"/>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="action_zalo">
+            <field name="name">izi_zalo window</field>
+            <field name="res_model">zalo.zalo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Zalo App" id="menu_root"/>
+        <menuitem name="Zalo" id="menu_1" parent="menu_root"/>
+        <menuitem name="Zalo" id="menu_1_list" parent="menu_1"
+                  action="action_zalo"/>
+        -->
+    </data>
+</odoo>

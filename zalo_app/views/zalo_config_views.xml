@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="izi_zalo_config_list">
+            <field name="name">izi_zalo_config_list list</field>
+            <field name="model">zalo.config</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="izi_zalo_config_form">
+            <field name="name">izi_zalo_config_form list</field>
+            <field name="model">zalo.config</field>
+            <field name="arch" type="xml">
+                <header>
+                    <button type="object" name="action_get_access_token" string="GET ACCESS TOKEN" />
+                </header>
+                <form>
+                    <group>
+                        <group>
+                            <field name="app_id"/>
+                            <field name="key_app_secret"/>
+                            <field name="default_oa_api_base"/>
+                            <field name="access_token_oa"/>
+                        </group>
+                        <group>
+                            <field name="oa_id"/>
+                            <field name="key_oa_secret"/>
+                            <field name="maximum_file_size"/>
+                            <field name="callback_url"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="action_zalo_config">
+            <field name="name">Configuration Zalo</field>
+            <field name="res_model">zalo.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Zalo Config" id="zalo_config" parent="base.menu_custom"/>
+        <menuitem name="Zalo Config" id="zalo_config_menu" parent="zalo_config"
+                  action="action_zalo_config"/>
+        -->
+    </data>
+</odoo>
